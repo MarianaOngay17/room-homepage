@@ -1,0 +1,33 @@
+@use 'variables' as v;
+@use 'sass:color';
+
+@mixin lessThanMobile {
+    @media (max-width: 300px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: v.$mobile) {
+        @content;
+    }
+}
+
+@mixin betweenMobileTablet {
+    @media (min-width: 450px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
